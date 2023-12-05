@@ -4,6 +4,7 @@ import { Grid, GridItem, Show } from "@chakra-ui/react";
 // UI COMPONENTS
 import { Navbar } from "./ui";
 
+
 function App() {
   return (
     <>
