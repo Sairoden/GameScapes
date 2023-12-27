@@ -4,7 +4,6 @@ import { Grid, GridItem, Show } from "@chakra-ui/react";
 // UI COMPONENTS
 import { Navbar } from "./ui";
 
-
 function App() {
   return (
     <>
@@ -17,14 +16,12 @@ function App() {
         <GridItem area="nav">
           <Navbar />
         </GridItem>
+
         <Show above="lg">
-          <GridItem area="aside" bg="gold">
-            Aside
-          </GridItem>
+          <GridItem area="aside">Aside</GridItem>
         </Show>
-        <GridItem area="main" bg="dodgerblue">
-          Main
-        </GridItem>
+
+        <GridItem area="main">Main</GridItem>
       </Grid>
     </>
   );
@@ -32,4 +29,4 @@ function App() {
 
 export default App;
 
-// LESSON 83
+// LESSON 85

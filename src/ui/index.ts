@@ -1,2 +1,4 @@
 import Navbar from "./Navbar";
-export { Navbar };
+import ColorModeSwitch from "./ColorModeSwitch";
+
+export { Navbar, ColorModeSwitch };
