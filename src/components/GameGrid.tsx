@@ -1,35 +1,11 @@
-// REACT & LIBRARIES
-import { SetStateAction, useEffect, useState } from "react";
-
 // STYLES
 import { Text } from "@chakra-ui/react";
 
-// SERVICES
-import apiClient from "../services/api-client";
-
-interface Game {
-  id: number;
-  name: string;
-}
-
-interface FetchGamesResponse {
-  results: SetStateAction<Game[]>;
-  count: number;
-  result: Game[];
-}
+// HOOKS
+import { useGames } from "../hooks";
 
 function GameGrid() {
-  const [games, setGames] = useState<Game[]>([]);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    apiClient
-      .get<FetchGamesResponse>("/games")
-      .then(res => {
-        setGames(res.data.results);
-      })
-      .catch(err => setError(err));
-  });
+  const { games, error } = useGames();
 
   return (
     <>
